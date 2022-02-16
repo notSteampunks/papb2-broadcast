@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 public class CustomReceiver extends BroadcastReceiver {
 
+//    private String ACTION_CUSTOM_BROADCAST = "ACTION_CUSTOM_BROADCAST";
     @Override
     public void onReceive(Context context, Intent intent) {
         // TODO: This method is called when the BroadcastReceiver is receiving
@@ -19,6 +20,9 @@ public class CustomReceiver extends BroadcastReceiver {
                 break;
             case Intent.ACTION_POWER_DISCONNECTED:
                 msg = "the power is disconnected";
+                break;
+            case "ACTION_CUSTOM_BROADCAST":
+                msg = "this is custom broadcast";
                 break;
             default:
                 msg = "default message";
