@@ -21,6 +21,7 @@ public class CustomReceiver extends BroadcastReceiver {
                 msg = "the power is disconnected";
                 break;
             default:
+                msg = "default message";
                 break;
         }
 
