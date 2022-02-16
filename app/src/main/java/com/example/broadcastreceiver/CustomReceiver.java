@@ -11,6 +11,20 @@ public class CustomReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         // TODO: This method is called when the BroadcastReceiver is receiving
         // an Intent broadcast.
-        Toast.makeText(context, "this function is called", Toast.LENGTH_SHORT).show();
+
+        String msg = "";
+        switch (intent.getAction()){
+            case Intent.ACTION_POWER_CONNECTED:
+                msg = "the power is connected";
+                break;
+            case Intent.ACTION_POWER_DISCONNECTED:
+                msg = "the power is disconnected";
+                break;
+            default:
+                break;
+        }
+
+        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+
     }
 }
