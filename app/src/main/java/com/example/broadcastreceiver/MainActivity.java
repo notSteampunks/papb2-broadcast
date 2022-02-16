@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent broadcastIntent = new Intent(ACTION_CUSTOM_BROADCAST);
+                broadcastIntent.putExtra("data", "this is the message you should show");
+
                 LocalBroadcastManager.getInstance(view.getContext()).sendBroadcast(broadcastIntent);
             }
         });
